@@ -1,0 +1,103 @@
+.about-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 230, 230, 0.1), transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    animation: rotate-glow 15s infinite linear;
+}
+
+.about-section::after {
+    content: '';
+    position: absolute;
+    bottom: 15%;
+    right: -10%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.1), transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    animation: rotate-glow-reverse 18s infinite linear;
+}
+
+@keyframes rotate-glow {
+    from { transform: rotate(0deg) translate(0, 0); }
+    to { transform: rotate(360deg) translate(20px, 20px); }
+}
+
+@keyframes rotate-glow-reverse {
+    from { transform: rotate(0deg) translate(0, 0); }
+    to { transform: rotate(-360deg) translate(-20px, -20px); }
+}
+
+.about-content {
+    background-color: var(--secondary-bg);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 230, 230, 0.2);
+    border: 1px solid var(--border-glow);
+    position: relative;
+    z-index: 1;
+}
+
+.about-content h2 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.vision-mission, .our-story {
+    margin-bottom: 40px;
+}
+
+.vision-mission h3, .our-story h3, .values h3 {
+    font-size: 2em;
+    color: var(--accent-purple);
+    text-shadow: 0 0 8px var(--accent-purple);
+    margin-bottom: 15px;
+    border-bottom: 1px dashed rgba(138, 43, 226, 0.3);
+    padding-bottom: 10px;
+}
+
+.values-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.value-item {
+    background-color: var(--primary-bg);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 250px;
+    max-width: 300px;
+    box-shadow: 0 0 15px rgba(0, 230, 230, 0.1);
+    border: 1px solid rgba(0, 230, 230, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px var(--accent-blue);
+}
+
+.value-item i { 
+    font-size: 3em;
+    color: var(--accent-blue);
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px var(--accent-blue);
+}

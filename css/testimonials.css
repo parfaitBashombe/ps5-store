@@ -1,0 +1,165 @@
+.testimonials-section {
+    padding: 50px 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: var(--secondary-bg);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 230, 230, 0.2);
+    border: 1px solid var(--border-glow);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card::before {
+    content: '“'; /* Large opening quote */
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 5em;
+    color: rgba(0, 230, 230, 0.1);
+    font-family: serif;
+    z-index: 0;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px var(--accent-blue), 0 0 50px var(--accent-purple);
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.customer-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--primary-bg);
+    border: 2px solid var(--accent-blue);
+    overflow: hidden;
+    margin-right: 15px;
+    box-shadow: 0 0 10px var(--accent-blue);
+}
+
+.customer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.customer-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em;
+    color: var(--accent-blue);
+    text-shadow: 0 0 5px var(--accent-blue);
+}
+
+.rating {
+    margin-top: 10px;
+}
+
+.star {
+    color: var(--accent-blue); 
+    font-size: 1.2em;
+    margin-right: 2px;
+    text-shadow: 0 0 8px var(--accent-blue);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--text-light);
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-form-section {
+    background-color: var(--secondary-bg);
+    margin-top: 50px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.testimonial-form-section h3 {
+    text-align: center;
+    color: var(--accent-purple);
+    margin-bottom: 30px;
+}
+
+.testimonial-form .form-group {
+    margin-bottom: 20px;
+}
+
+.testimonial-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-light);
+    font-weight: 700;
+}
+
+.testimonial-form input[type="text"],
+.testimonial-form input[type="email"],
+.testimonial-form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-bg);
+    border: 1px solid var(--border-glow);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-form input:focus,
+.testimonial-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 10px var(--accent-blue);
+}
+
+.testimonial-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.star-rating-input {
+    display: flex;
+    gap: 5px;
+    /* Removed flex-direction: row-reverse and justify-content: flex-end */
+    /* This will make the stars display in their natural HTML order (left to right) */
+}
+
+.star-rating-input label {
+    cursor: pointer;
+    font-size: 1.8em;
+    color: var(--text-dark); /* Unfilled star color */
+    transition: color 0.3s ease;
+}
+
+.star-rating-input input[type="radio"] {
+    display: none;
+}
+
+/* This CSS will now work with the HTML ordered from star5 down to star1 */
+/* When a star is checked/hovered, all its preceding siblings (lower value stars) will be highlighted. */
+.star-rating-input input[type="radio"]:checked ~ label,
+.star-rating-input label:hover,
+.star-rating-input label:hover ~ label {
+    color: var(--accent-blue);
+    text-shadow: 0 0 10px var(--accent-blue);
+}
