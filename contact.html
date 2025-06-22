@@ -15,13 +15,7 @@
     <header class="main-header">
       <nav class="navbar">
         <a href="index.html" class="logo">The PS5 Store</a>
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="games.html">Games</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html" class="active">Contact Us</a></li>
-        </ul>
+        <ul class="nav-list"></ul>
       </nav>
     </header>
 
@@ -32,30 +26,12 @@
         <div class="contact-grid">
           <div class="contact-info">
             <h3>Contact Information</h3>
-            <div class="contact-details">
-              <p>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:support@theps5store.com"
-                  >support@theps5store.com</a
-                >
-              </p>
-              <p><i class="fas fa-phone"></i> +1 (555) PS5-TECH</p>
-              <p>
-                <i class="fas fa-headset"></i> Customer Support available 24/7
-              </p>
-              <p>
-                <i class="fas fa-map-marker-alt"></i> Virtual Headquarters:
-                Cybercity Plaza, Sector 7, Neo-Tokyo 90210
-              </p>
-            </div>
+            <div class="contact-details"></div>
             <div
               class="social-links"
               style="margin-top: 30px; text-align: left"
             >
               <h4>Follow Us:</h4>
-              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
 
@@ -95,75 +71,7 @@
 
         <div class="faq-section container">
           <h3>Frequently Asked Questions</h3>
-          <div class="faq-list">
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>What payment methods do you accept?</span>
-                <span class="toggle-icon">+</span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  We accept all major credit cards (Visa, Mastercard, Amex),
-                  PayPal, and futuristic cryptocurrency payments like Etherium
-                  and Bitcoin (via a secure third-party gateway).
-                </p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>How long does shipping take?</span>
-                <span class="toggle-icon">+</span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  Standard shipping typically takes 3-5 business days. Express
-                  next-gen delivery options are available for select regions,
-                  often arriving within 24 hours.
-                </p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>Can I pre-order upcoming games?</span>
-                <span class="toggle-icon">+</span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  Yes, we offer pre-orders for highly anticipated titles. You
-                  can find them listed in our Games Gallery under the 'Upcoming'
-                  filter. Pre-orders ensure you receive your game on release
-                  day!
-                </p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>Do you offer international shipping?</span>
-                <span class="toggle-icon">+</span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  Currently, we ship to major regions globally. Please check our
-                  shipping policy page or contact support for specific country
-                  availability and rates.
-                </p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question">
-                <span>What is your return policy?</span>
-                <span class="toggle-icon">+</span>
-              </div>
-              <div class="faq-answer">
-                <p>
-                  We offer a 30-day satisfaction guarantee on most products.
-                  Please refer to our detailed Return Policy page for specific
-                  terms and conditions regarding consoles, games, and
-                  accessories.
-                </p>
-              </div>
-            </div>
-          </div>
+          <div class="faq-list"></div>
         </div>
       </section>
     </main>
@@ -174,25 +82,10 @@
         <div class="footer-links">
           <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
         </div>
-        <div class="social-links">
-          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
+        <div class="social-links"></div>
       </div>
     </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const faqQuestions = document.querySelectorAll(".faq-question");
-
-        faqQuestions.forEach((question) => {
-          question.addEventListener("click", () => {
-            const faqItem = question.closest(".faq-item");
-            faqItem.classList.toggle("active");
-          });
-        });
-      });
-    </script>
+    <script type="module" src="js/contact/main.js"></script>
   </body>
 </html>
