@@ -51,7 +51,7 @@ export const renderControllerCards = (containerSelector, data) => {
     console.error(`Controllers display container not found: ${containerSelector}`);
     return;
   }
-  container.innerHTML = ''; // Clear existing content
+  container.innerHTML = '';
 
   data.forEach(card => {
     const controllerCard = document.createElement('div');

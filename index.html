@@ -14,25 +14,32 @@
   <body>
     <header class="main-header">
       <nav class="navbar">
-        <a href="index.html" class="logo">The PS5 Store</a>
+        <a href="index.html" class="logo">PS5 Store</a>
         <ul class="nav-list"></ul>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-          <source
-            src="https://assets.playstation.com/ps5-showcase-video.mp4"
-            type="video/mp4"
-          />
-          <img src="images/ps5-hero.jpg" alt="PlayStation 5 Console" />
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="/images/hero 1.jpeg"
+        >
+          <source src="/images/ps5 trailer.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
+
         <div class="hero-content">
-          <h1>The PS5 Store</h1>
+          <h1>PS5 Store</h1>
           <p>Experience the Future of Gaming</p>
-          <a href="games.html" class="btn">Explore Games</a>
-          <a href="#console-showcase" class="btn">Customize Your Console</a>
+          <div class="container">
+            <a href="games.html" class="btn">Explore Games</a>
+            <a href="consoles.html" class="btn">Customize Your Console</a>
+          </div>
         </div>
       </section>
 
@@ -41,11 +48,11 @@
           <h2>Unleash Next-Gen Power</h2>
           <div class="console-display"></div>
 
-          <h2>Customize Your Control</h2>
+          <h2>Customize Your Controller</h2>
           <div class="controllers-display"></div>
 
           <div style="text-align: center; margin-top: 50px">
-            <a href="#" class="btn">View All Accessories</a>
+            <a href="/consoles.html" class="btn">View All Accessories</a>
           </div>
         </div>
       </section>
@@ -53,7 +60,7 @@
 
     <footer class="main-footer">
       <div class="container">
-        <p>&copy; 2025 The PS5 Store. All rights reserved.</p>
+        <p>&copy; 2025 PS5 Store. All rights reserved.</p>
         <div class="footer-links">
           <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
         </div>

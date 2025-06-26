@@ -1,5 +1,3 @@
-// js/contact/contactData.js
-
 export const contactInfoData = [
   { iconClass: "fas fa-envelope", text: "support@theps5store.com", isLink: true, linkHref: "mailto:support@theps5store.com" },
   { iconClass: "fas fa-phone", text: "+1 (555) PS5-TECH" },

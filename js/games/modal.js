@@ -1,4 +1,3 @@
-// modal.js
 import {
   modal,
   closeBtn,
@@ -11,12 +10,12 @@ import {
   modalPrice,
   modalAddToCartBtn,
 } from "./domElements.js";
-import { allGames } from "./data.js"; // Need access to allGames data
+import { allGames } from "./data.js";
 
 export const attachViewDetailsListeners = () => {
   const viewDetailBtns = document.querySelectorAll(".view-details-btn");
   viewDetailBtns.forEach((btn) => {
-    btn.removeEventListener("click", openGameDetailModal); // Prevent duplicate listeners
+    btn.removeEventListener("click", openGameDetailModal);
     btn.addEventListener("click", openGameDetailModal);
   });
 };
@@ -33,11 +32,10 @@ const openGameDetailModal = (e) => {
     modalGenre.textContent = game.displayGenre;
     modalReleaseDate.textContent = game.releaseDate;
     modalPrice.textContent = game.price;
-    modalAddToCartBtn.href = "#"; // You might want to update this to a specific cart action
+    modalAddToCartBtn.href = "#";
 
-    // Clear previous screenshots
     modalScreenshotsContainer.innerHTML = "";
-    game.screenshots.map((screenshotUrl) => {
+    game.screenshots.forEach((screenshotUrl) => {
       const img = document.createElement("img");
       img.src = screenshotUrl;
       img.alt = "Game Screenshot";
@@ -45,17 +43,20 @@ const openGameDetailModal = (e) => {
     });
 
     modal.style.display = "flex";
+    document.body.classList.add("modal-open");
   }
 };
 
-closeBtn.addEventListener("click", () => {
+const closeModal = () => {
   modal.style.display = "none";
-  modalVideo.src = ""; // Stop video playback when closing
-});
+  modalVideo.src = "";
+  document.body.classList.remove("modal-open");
+};
+
+closeBtn.addEventListener("click", closeModal);
 
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
-    modal.style.display = "none";
-    modalVideo.src = ""; // Stop video playback when closing
+    closeModal();
   }
 });

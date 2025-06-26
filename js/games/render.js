@@ -1,14 +1,13 @@
-// render.js
 import { gameGrid } from "./domElements.js";
-import { attachViewDetailsListeners } from "./modal.js"; // We'll create modal.js next
+import { attachViewDetailsListeners } from "./modal.js";
 
 export const renderGames = (gamesToRender) => {
-  gameGrid.innerHTML = ""; // Clear existing games
+  gameGrid.innerHTML = "";
   gamesToRender.map((game) => {
     const gameCard = document.createElement("div");
     gameCard.classList.add("game-card");
     gameCard.dataset.genre = game.genre;
-    gameCard.dataset.id = game.id; // Add a data-id for easy lookup
+    gameCard.dataset.id = game.id;
 
     gameCard.innerHTML = `
       <img src="${game.image}" alt="${game.title}" />
@@ -22,6 +21,5 @@ export const renderGames = (gamesToRender) => {
     gameGrid.appendChild(gameCard);
   });
 
-  // Attach event listeners to newly created "View Details" buttons
   attachViewDetailsListeners();
 };

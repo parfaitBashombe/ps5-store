@@ -1,12 +1,10 @@
-// js/testimonials/testimonialsRender.js
-
 export const renderTestimonials = (containerSelector, data) => {
   const testimonialsGrid = document.querySelector(containerSelector);
   if (!testimonialsGrid) {
     console.error(`Testimonials grid container not found: ${containerSelector}`);
     return;
   }
-  testimonialsGrid.innerHTML = ''; // Clear existing content
+  testimonialsGrid.innerHTML = '';
 
   data.forEach(testimonial => {
     const testimonialCard = document.createElement('div');
@@ -32,7 +30,7 @@ export const renderTestimonials = (containerSelector, data) => {
     const ratingDiv = document.createElement('div');
     ratingDiv.classList.add('rating');
 
-    // Render stars based on the rating number
+  
     const fullStars = Math.floor(testimonial.rating);
     const hasHalfStar = testimonial.rating % 1 !== 0;
 
@@ -46,11 +44,11 @@ export const renderTestimonials = (containerSelector, data) => {
       halfStar.classList.add('fas', 'fa-star-half-alt', 'star');
       ratingDiv.appendChild(halfStar);
     }
-    // Optionally add empty stars for a full 5-star display
+
     const totalStars = 5;
     for (let i = 0; i < (totalStars - fullStars - (hasHalfStar ? 1 : 0)); i++) {
         const emptyStar = document.createElement('i');
-        emptyStar.classList.add('far', 'fa-star', 'star'); // 'far' for empty star
+        emptyStar.classList.add('far', 'fa-star', 'star'); 
         ratingDiv.appendChild(emptyStar);
     }
 
