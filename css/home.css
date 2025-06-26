@@ -31,6 +31,10 @@
   text-align: center;
 }
 
+.hero-content a {
+  margin: 4px;
+}
+
 .hero-content h1 {
   font-size: 4em;
   margin-bottom: 10px;
