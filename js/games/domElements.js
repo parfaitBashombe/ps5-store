@@ -1,4 +1,3 @@
-// domElements.js
 export const gameGrid = document.querySelector(".game-grid");
 export const filterButtons = document.querySelectorAll(".filter-btn");
 export const searchInput = document.querySelector(".search-bar input");

@@ -20,7 +20,7 @@
 }
 
 .testimonial-card::before {
-    content: '“'; /* Large opening quote */
+    content: '“'; 
     position: absolute;
     top: 15px;
     left: 20px;
@@ -140,14 +140,14 @@
 .star-rating-input {
     display: flex;
     gap: 5px;
-    /* Removed flex-direction: row-reverse and justify-content: flex-end */
-    /* This will make the stars display in their natural HTML order (left to right) */
+    flex-direction: row-reverse ; 
+    justify-content: flex-end
 }
 
 .star-rating-input label {
     cursor: pointer;
     font-size: 1.8em;
-    color: var(--text-dark); /* Unfilled star color */
+    color: var(--text-dark); 
     transition: color 0.3s ease;
 }
 
@@ -155,8 +155,7 @@
     display: none;
 }
 
-/* This CSS will now work with the HTML ordered from star5 down to star1 */
-/* When a star is checked/hovered, all its preceding siblings (lower value stars) will be highlighted. */
+
 .star-rating-input input[type="radio"]:checked ~ label,
 .star-rating-input label:hover,
 .star-rating-input label:hover ~ label {

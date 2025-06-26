@@ -15,8 +15,6 @@ export const renderNavLinks = (containerSelector, currentPage) => {
     a.href = link.href;
     a.textContent = link.text;
 
-    // Add 'active' class if the link matches the current page
-    // Using simple string comparison for demonstration, could be more robust
     if (link.href === currentPage) {
       a.classList.add('active');
     }
@@ -31,14 +29,14 @@ export const renderSocialLinks = (containerSelector) => {
     console.error(`Social links container not found: ${containerSelector}`);
     return;
   }
-  socialLinksDiv.innerHTML = ''; // Clear existing content
+  socialLinksDiv.innerHTML = ''; 
 
   socialLinksData.forEach(link => {
     const a = document.createElement('a');
     a.href = link.href;
     a.target = link.target;
     const i = document.createElement('i');
-    // Use spread operator to add multiple classes from an array
+    
     i.classList.add(...link.iconClass.split(' '));
     a.appendChild(i);
     socialLinksDiv.appendChild(a);

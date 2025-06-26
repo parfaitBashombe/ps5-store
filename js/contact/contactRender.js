@@ -1,12 +1,10 @@
-// js/contact/contactRender.js
-
 export const renderContactInfo = (containerSelector, data) => {
   const container = document.querySelector(containerSelector);
   if (!container) {
     console.error(`Contact info container not found: ${containerSelector}`);
     return;
   }
-  container.innerHTML = ''; // Clear existing content
+  container.innerHTML = '';
 
   data.forEach(item => {
     const p = document.createElement('p');
@@ -32,7 +30,7 @@ export const renderFAQs = (containerSelector, data) => {
     console.error(`FAQ list container not found: ${containerSelector}`);
     return;
   }
-  faqList.innerHTML = ''; // Clear existing content
+  faqList.innerHTML = ''; 
 
   data.forEach(faq => {
     const faqItem = document.createElement('div');
@@ -44,7 +42,7 @@ export const renderFAQs = (containerSelector, data) => {
     questionSpan.textContent = faq.question;
     const toggleIcon = document.createElement('span');
     toggleIcon.classList.add('toggle-icon');
-    toggleIcon.textContent = '+'; // Initial state
+    toggleIcon.textContent = '+'; 
     faqQuestion.appendChild(questionSpan);
     faqQuestion.appendChild(toggleIcon);
     faqItem.appendChild(faqQuestion);
@@ -59,13 +57,13 @@ export const renderFAQs = (containerSelector, data) => {
     faqList.appendChild(faqItem);
   });
 
-  // Attach event listeners for accordion functionality after rendering
+ 
   const faqQuestions = document.querySelectorAll(".faq-question");
   faqQuestions.forEach((question) => {
     question.addEventListener("click", () => {
       const faqItem = question.closest(".faq-item");
       faqItem.classList.toggle("active");
-      // Optionally toggle '+' and '-' icon
+
       const toggleIcon = question.querySelector('.toggle-icon');
       if (faqItem.classList.contains('active')) {
           toggleIcon.textContent = '-';

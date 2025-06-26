@@ -1,19 +1,17 @@
-// js/about/aboutRender.js
-
 export const renderCoreValues = (containerSelector, data) => {
   const valuesList = document.querySelector(containerSelector);
   if (!valuesList) {
     console.error(`Core values list container not found: ${containerSelector}`);
     return;
   }
-  valuesList.innerHTML = ''; // Clear existing content
+  valuesList.innerHTML = ''; 
 
   data.forEach(value => {
     const valueItem = document.createElement('li');
     valueItem.classList.add('value-item');
 
     const icon = document.createElement('i');
-    icon.classList.add(...value.iconClass.split(' ')); // Add all classes
+    icon.classList.add(...value.iconClass.split(' ')); 
     valueItem.appendChild(icon);
 
     const title = document.createElement('h4');
