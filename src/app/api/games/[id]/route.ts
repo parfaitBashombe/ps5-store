@@ -4,10 +4,10 @@ import { allGames } from '@/lib/data/games-data';
 // GET /api/games/[id] - Get a single game by ID
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const game = allGames.find((g) => g.id === id);
 
     if (!game) {
