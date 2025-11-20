@@ -1,0 +1,58 @@
+import type { Testimonial } from '@/types';
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Alex J.",
+    location: "New York, NY",
+    tag: "PS5 Console",
+    rating: 3,
+    title: "A True Next-Gen Leap!",
+    text: "Absolutely blown away by the speed and graphics of the PS5 console. Load times are a thing of the past!",
+    img: "https://i.pravatar.cc/150?u=alex",
+  },
+  {
+    name: "Samantha K.",
+    location: "London, UK",
+    tag: "Controller",
+    rating: 5,
+    title: "Incredibly Immersive",
+    text: "The DualSense controller is a game-changer. The haptic feedback and adaptive triggers are amazing.",
+    img: "https://i.pravatar.cc/150?u=samantha",
+  },
+  {
+    name: "Mikey P.",
+    location: "Austin, TX",
+    tag: "Game",
+    rating: 4,
+    title: "A Visual Masterpiece",
+    text: "Spider-Man: Miles Morales is stunning. Swinging through New York has never felt so good.",
+    img: "https://i.pravatar.cc/150?u=mikey",
+  },
+  {
+    name: "Jenna R.",
+    location: "Sydney, AU",
+    tag: "PS5 Console",
+    rating: 5,
+    title: "Worth The Wait!",
+    text: "Finally got my hands on a PS5. The setup was seamless and the user interface is so clean and fast.",
+    img: "https://i.pravatar.cc/150?u=jenna",
+  },
+  {
+    name: "Carlos V.",
+    location: "Miami, FL",
+    tag: "Game",
+    rating: 5,
+    title: "Haptics are Insane",
+    text: "The haptics on the DualSense controller for Returnal are insane. You can feel every drop of rain. 10/10.",
+    img: "https://i.pravatar.cc/150?u=carlos",
+  },
+  {
+    name: "Emily T.",
+    location: "Toronto, CA",
+    tag: "PS5 Console",
+    rating: 4,
+    title: "Almost Perfect",
+    text: "The graphics are stunning and gameplay is so smooth. My only wish is for more exclusive titles!",
+    img: "https://i.pravatar.cc/150?u=emilyt",
+  },
+];
