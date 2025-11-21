@@ -6,19 +6,11 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-8">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="flex flex-col gap-4">
-            <h4 className="font-bold text-white">Shop</h4>
-            <Link className="hover:text-white" href="#">
-              Consoles
-            </Link>
-            <Link className="hover:text-white" href="#">
-              Games
-            </Link>
-            <Link className="hover:text-white" href="#">
-              Accessories
-            </Link>
-            <Link className="hover:text-white" href="#">
-              Special Offers
-            </Link>
+            <h3 className="text-white text-lg font-bold">Shop</h3>
+            <Link href="/products?category=games" className="text-white/60 hover:text-white transition-colors">Games</Link>
+            <Link href="/products?category=consoles" className="text-white/60 hover:text-white transition-colors">Consoles</Link>
+            <Link href="/products?category=accessories" className="text-white/60 hover:text-white transition-colors">Accessories</Link>
+            <Link href="/products?category=deals" className="text-white/60 hover:text-white transition-colors">Deals</Link>
           </div>
           <div className="flex flex-col gap-4">
             <h4 className="font-bold text-white">Support</h4>

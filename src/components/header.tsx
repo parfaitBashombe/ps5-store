@@ -1,16 +1,68 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "@/context/theme-context";
+import type { Game } from "@/types";
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  // Search state
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<Game[]>([]);
+  const [allGames, setAllGames] = useState<Game[]>([]);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const searchRef = React.useRef<HTMLDivElement>(null);
 
-  const isActive = (path: string) => pathname === path;
+  const isActive = (path: string) => {
+    if (path === "/") return pathname === "/";
+    return pathname.startsWith(path);
+  };
+
+  // Fetch games for search
+  useEffect(() => {
+    async function fetchGames() {
+      try {
+        const response = await fetch('/api/products');
+        const result = await response.json();
+        if (result.success) {
+          setAllGames(result.data);
+        }
+      } catch (error) {
+        console.error('Failed to fetch games for search:', error);
+      }
+    }
+    fetchGames();
+  }, []);
+
+  // Handle search
+  useEffect(() => {
+    if (searchQuery.trim() === "") {
+      setSearchResults([]);
+      return;
+    }
+
+    const filtered = allGames.filter(game => 
+      game.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setSearchResults(filtered);
+  }, [searchQuery, allGames]);
+
+  // Click outside to close dropdown
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setShowDropdown(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 flex items-center justify-center border-b border-solid border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-8">
@@ -47,6 +99,14 @@ export default function Header() {
             </Link>
             <Link
               className={`${
+                isActive("/products") ? "text-white" : "text-white/80"
+              } text-sm font-medium leading-normal transition-colors hover:text-white`}
+              href="/products"
+            >
+              Products
+            </Link>
+            <Link
+              className={`${
                 isActive("/about") ? "text-white" : "text-white/80"
               } text-sm font-medium leading-normal transition-colors hover:text-white`}
               href="/about"
@@ -72,19 +132,65 @@ export default function Header() {
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end gap-2 sm:gap-4">
-          <label className="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
-            <div className="flex w-full flex-1 items-stretch rounded-lg h-full">
-              <div className="text-white/50 flex border-none bg-white/10 items-center justify-center pl-3 rounded-l-lg border-r-0">
-                <span className="material-symbols-outlined text-[20px]">
-                  search
-                </span>
+          <div className="relative hidden sm:block w-full max-w-64" ref={searchRef}>
+            <label className="flex flex-col w-full h-10">
+              <div className="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div className="text-white/50 flex border-none bg-white/10 items-center justify-center pl-3 rounded-l-lg border-r-0">
+                  <span className="material-symbols-outlined text-[20px]">
+                    search
+                  </span>
+                </div>
+                <input
+                  className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border-none bg-white/10 focus:border-none h-full placeholder:text-white/50 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  placeholder="Search"
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setShowDropdown(true);
+                  }}
+                  onFocus={() => setShowDropdown(true)}
+                />
               </div>
-              <input
-                className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border-none bg-white/10 focus:border-none h-full placeholder:text-white/50 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
-                placeholder="Search"
-              />
-            </div>
-          </label>
+            </label>
+
+            {/* Search Dropdown */}
+            {showDropdown && searchQuery && (
+              <div className="absolute top-full left-0 right-0 mt-2 bg-[#1a1a1a] border border-white/10 rounded-lg shadow-xl overflow-hidden max-h-96 overflow-y-auto">
+                {searchResults.length > 0 ? (
+                  <div className="py-2">
+                    {searchResults.map((game) => (
+                      <Link
+                        key={game.id}
+                        href={`/products/${game.id}`}
+                        onClick={() => {
+                          setShowDropdown(false);
+                          setSearchQuery("");
+                        }}
+                        className="flex items-center gap-3 px-4 py-2 hover:bg-white/5 transition-colors"
+                      >
+                        <div className="w-10 h-10 rounded overflow-hidden shrink-0">
+                          <img 
+                            src={game.image} 
+                            alt={game.title} 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-white text-sm font-medium truncate">{game.title}</h4>
+                          <p className="text-primary text-xs font-bold">{game.price}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="px-4 py-3 text-white/60 text-sm text-center">
+                    No results found
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+
           <div className="flex gap-2">
             <button
               onClick={toggleTheme}
