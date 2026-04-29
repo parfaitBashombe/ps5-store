@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0f1f;
+  --foreground: #f8fafc;
+
+  /* Brand Colors */
+  --primary: #2563eb;
+  --primary-hover: #3b82f6;
+  --secondary: #0f172a;
+  --accent: #38bdf8;
+
+  /* UI Colors */
+  --card: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --muted: #94a3b8;
+  --muted-foreground: #cbd5e1;
+
+  /* Effects */
+  --shadow-glow: 0 10px 40px rgba(37, 99, 235, 0.25);
+  --radius-xl: 1.5rem;
 }
 
 @theme inline {
+  /* Base */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Brand */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+
+  /* UI */
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Radius */
+  --radius-xl: var(--radius-xl);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #08101f;
+    --foreground: #f8fafc;
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at top, rgba(37, 99, 235, 0.18), transparent 35%),
+    radial-gradient(
+      circle at bottom,
+      rgba(56, 189, 248, 0.12),
+      transparent 25%
+    ),
+    linear-gradient(180deg, #08101f 0%, #0a0f1f 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.35);
+  color: white;
 }
