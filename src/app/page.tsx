@@ -150,7 +150,7 @@ const Page = () => {
             return (
               <div
                 key={feature.title}
-                className="rounded-4xl border border-card-border bg-card p-6 shadow-[var(--shadow-glow)] backdrop-blur-xl transition duration-300 hover:-translate-y-1"
+                className="rounded-4xl border border-card-border bg-card p-6 shadow-(--shadow-glow) backdrop-blur-xl transition duration-300 hover:-translate-y-1"
               >
                 <div className="inline-flex rounded-2xl bg-primary/10 p-4 text-2xl text-primary">
                   <Icon />
@@ -267,7 +267,7 @@ const Page = () => {
 
       {/* Newsletter */}
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-6 lg:px-8">
-        <div className="rounded-4xl border border-card-border bg-linear-to-r from-primary/15 via-card to-primary/10 p-8 shadow-[var(--shadow-glow)] backdrop-blur-xl md:p-12">
+        <div className="rounded-4xl border border-card-border bg-linear-to-r from-primary/15 via-card to-primary/10 p-8 shadow-(--shadow-glow) backdrop-blur-xl md:p-12">
           <div className="grid gap-8 md:grid-cols-[1.3fr_0.7fr] md:items-center">
             <div>
               <SectionTitle
