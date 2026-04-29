@@ -1,36 +1,159 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PS5 Store
+
+A modern premium PlayStation-inspired e-commerce website built with Next.js, TypeScript, and Tailwind CSS v4.
+
+The project features a dark UI theme, neon-style accents, glassmorphism components, and a fully responsive design focused on delivering a premium gaming store experience.
+
+---
+
+## Features
+
+- Built with Next.js App Router
+- TypeScript for type safety
+- Tailwind CSS v4 styling system
+- Premium PlayStation-inspired UI design
+- Dark theme with neon blue accents
+- Fully responsive layout
+- Glassmorphism cards and UI elements
+- Product search functionality
+- Product filtering by rating
+- Featured product sections
+- Testimonials section
+- FAQ section
+- Newsletter subscription UI
+- Smooth hover animations and transitions
+
+---
+
+## Project Structure
+
+```bash
+app/
+├── page.tsx
+├── about/
+│   └── page.tsx
+├── products/
+│   └── page.tsx
+
+components/
+├── footer.tsx
+├── hero-section.tsx
+├── navbar.tsx
+├── product-card.tsx
+├── section-title.tsx
+
+lib/
+└── data/
+    └── product.ts
+```
+
+---
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS v4
+- React Icons
+
+---
+
+## Pages
+
+### Home (/)
+- Hero section
+- Featured products
+- Why choose us section
+- How it works section
+- Testimonials
+- FAQ
+- Newsletter
+
+### Products (/products)
+- Product grid (4 columns on large screens)
+- Search functionality
+- Rating filter
+- Responsive product cards
+
+### About (/about)
+- Brand overview
+- Mission statement
+- Core values
+- Gaming-focused presentation
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/ps5-store.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navigate into the project:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd ps5-store
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Install dependencies:
 
-## Learn More
+```bash
+pnpm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Run development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open in browser:
 
-## Deploy on Vercel
+```
+http://localhost:3000
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Production Build
+
+```bash
+pnpm build
+pnpm start
+```
+
+---
+
+## Design System
+
+### Colors
+
+- Primary: #0066ff
+- Accent: #00d4ff
+- Background: #050816
+- Card: rgba(15, 23, 42, 0.72)
+
+### UI Style
+
+- Glassmorphism cards
+- Soft neon glow shadows
+- Rounded corners
+- Smooth hover transitions
+- Dark premium gaming aesthetic
+
+---
+
+## Author
+
+Parfait MB
+
+GitHub: https://github.com/parfaitBashombe
+
+---
+
+## License
+
+This project is licensed under the MIT License.
