@@ -38,45 +38,45 @@ const Page = () => {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "Alex Carter",
-      role: "Pro Gamer",
-      review:
-        "Best gaming store experience I've seen. Smooth interface, premium products, and fast checkout.",
-    },
-    {
-      name: "Sophia Kim",
-      role: "Streamer",
-      review:
-        "Love the design and product collection. It actually feels like a PlayStation premium experience.",
-    },
-    {
-      name: "James Brown",
-      role: "Collector",
-      review:
-        "Authentic products, excellent support, and super clean user experience.",
-    },
-  ];
-
   const steps = [
     {
       icon: FaShoppingBag,
       title: "Browse Products",
       description:
-        "Explore consoles, accessories, games, and premium gaming gear.",
+        "Explore premium gaming consoles, accessories, and exclusive titles.",
     },
     {
       icon: FaTruck,
-      title: "Place Order",
+      title: "Fast Checkout",
       description:
-        "Add items to cart and complete checkout in just a few clicks.",
+        "Place your order in seconds with a seamless checkout experience.",
     },
     {
       icon: FaCheckCircle,
       title: "Enjoy Gaming",
       description:
-        "Receive your products quickly and start your next gaming adventure.",
+        "Receive your products quickly and start your next adventure.",
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Alex Carter",
+      role: "Pro Gamer",
+      review:
+        "Best gaming store experience I've ever had. Clean design, amazing products, and smooth navigation.",
+    },
+    {
+      name: "Sophia Kim",
+      role: "Streamer",
+      review:
+        "Love the premium PlayStation feel. Everything looks polished and professional.",
+    },
+    {
+      name: "James Brown",
+      role: "Collector",
+      review:
+        "Excellent collection of authentic products. Definitely my go-to gaming store.",
     },
   ];
 
@@ -84,16 +84,15 @@ const Page = () => {
     {
       question: "Do you sell authentic PlayStation products?",
       answer:
-        "Yes, all products listed in our store are authentic and quality checked.",
+        "Yes, every product listed is quality checked and sourced from trusted suppliers.",
     },
     {
       question: "How fast is delivery?",
-      answer:
-        "Orders are processed quickly with fast and reliable delivery options.",
+      answer: "Orders are processed quickly with reliable delivery options.",
     },
     {
-      question: "Can I get support anytime?",
-      answer: "Absolutely. Our support team is available 24/7 to assist you.",
+      question: "Can I contact support anytime?",
+      answer: "Yes, our support team is available 24/7.",
     },
   ];
 
@@ -103,7 +102,7 @@ const Page = () => {
         badge="Premium PlayStation Store"
         icon={<FaGamepad className="text-primary" />}
         title="Level Up Your Gaming Experience"
-        subtitle="Discover a premium PS5-inspired store with the best console gear, accessories, and must-play titles designed to elevate every session."
+        subtitle="Discover premium PS5 gear, accessories, and iconic titles designed to elevate every session."
         primaryCta={{
           label: "Shop Now",
           href: "/products",
@@ -114,15 +113,15 @@ const Page = () => {
           href: "/products",
         }}
         image="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80"
-        imageAlt="Gaming setup with neon lights"
+        imageAlt="Gaming setup"
       />
 
-      {/* Featured Products */}
+      {/* Featured */}
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-6 lg:px-8">
         <SectionTitle
           eyebrow="Featured"
           title="Top Gaming Picks"
-          description="Handpicked products that bring power, comfort, and immersion together."
+          description="Handpicked products built for gamers who want performance and style."
         />
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -145,21 +144,24 @@ const Page = () => {
         />
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {features.map((item) => {
-            const Icon = item.icon;
+          {features.map((feature) => {
+            const Icon = feature.icon;
+
             return (
               <div
-                key={item.title}
-                className="rounded-4xl border border-card-border bg-card p-6 shadow-xl backdrop-blur-xl transition hover:-translate-y-1"
+                key={feature.title}
+                className="rounded-4xl border border-card-border bg-card p-6 shadow-[var(--shadow-glow)] backdrop-blur-xl transition duration-300 hover:-translate-y-1"
               >
                 <div className="inline-flex rounded-2xl bg-primary/10 p-4 text-2xl text-primary">
                   <Icon />
                 </div>
-                <h3 className="mt-5 text-xl font-semibold text-white">
-                  {item.title}
+
+                <h3 className="mt-5 text-xl font-semibold text-foreground">
+                  {feature.title}
                 </h3>
+
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                  {item.description}
+                  {feature.description}
                 </p>
               </div>
             );
@@ -167,18 +169,18 @@ const Page = () => {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How it works */}
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-6 lg:px-8">
         <SectionTitle
-          eyebrow="Simple Process"
-          title="How It Works"
-          description="Shopping for your next gaming setup has never been easier."
+          eyebrow="How It Works"
+          title="Simple, Fast & Premium"
           centered
         />
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {steps.map((step) => {
             const Icon = step.icon;
+
             return (
               <div
                 key={step.title}
@@ -187,9 +189,11 @@ const Page = () => {
                 <div className="mx-auto inline-flex rounded-full bg-primary/10 p-5 text-3xl text-primary">
                   <Icon />
                 </div>
-                <h3 className="mt-5 text-xl font-semibold text-white">
+
+                <h3 className="mt-5 text-xl font-semibold text-foreground">
                   {step.title}
                 </h3>
+
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
                   {step.description}
                 </p>
@@ -199,33 +203,9 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="mx-auto max-w-7xl px-4 py-10 md:px-6 lg:px-8">
-        <div className="grid gap-6 md:grid-cols-4">
-          {[
-            { value: "10K+", label: "Happy Customers" },
-            { value: "500+", label: "Products Sold" },
-            { value: "4.9/5", label: "Average Rating" },
-            { value: "24/7", label: "Support" },
-          ].map((stat) => (
-            <div
-              key={stat.label}
-              className="rounded-4xl border border-card-border bg-card p-6 text-center backdrop-blur-xl"
-            >
-              <h3 className="text-3xl font-black text-primary">{stat.value}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Testimonials */}
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-6 lg:px-8">
-        <SectionTitle
-          eyebrow="Testimonials"
-          title="What Gamers Say About Us"
-          centered
-        />
+        <SectionTitle eyebrow="Testimonials" title="What Gamers Say" centered />
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {testimonials.map((testimonial) => (
@@ -234,18 +214,21 @@ const Page = () => {
               className="rounded-4xl border border-card-border bg-card p-6 backdrop-blur-xl"
             >
               <FaQuoteLeft className="text-3xl text-primary" />
+
               <p className="mt-4 leading-7 text-muted-foreground">
                 {testimonial.review}
               </p>
 
-              <div className="mt-5 flex items-center gap-1 text-yellow-400">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <FaStar key={i} />
+              <div className="mt-5 flex gap-1 text-yellow-400">
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <FaStar key={index} />
                 ))}
               </div>
 
               <div className="mt-5">
-                <h4 className="font-semibold text-white">{testimonial.name}</h4>
+                <h4 className="font-semibold text-foreground">
+                  {testimonial.name}
+                </h4>
                 <p className="text-sm text-muted">{testimonial.role}</p>
               </div>
             </div>
@@ -269,8 +252,11 @@ const Page = () => {
             >
               <div className="flex items-center gap-3">
                 <FaQuestionCircle className="text-primary" />
-                <h3 className="font-semibold text-white">{faq.question}</h3>
+                <h3 className="font-semibold text-foreground">
+                  {faq.question}
+                </h3>
               </div>
+
               <p className="mt-3 text-sm leading-7 text-muted-foreground">
                 {faq.answer}
               </p>
@@ -281,22 +267,24 @@ const Page = () => {
 
       {/* Newsletter */}
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-6 lg:px-8">
-        <div className="rounded-4xl border border-card-border bg-linear-to-r from-primary/15 via-card to-primary/10 p-8 shadow-2xl backdrop-blur-xl md:p-12">
+        <div className="rounded-4xl border border-card-border bg-linear-to-r from-primary/15 via-card to-primary/10 p-8 shadow-[var(--shadow-glow)] backdrop-blur-xl md:p-12">
           <div className="grid gap-8 md:grid-cols-[1.3fr_0.7fr] md:items-center">
             <div>
               <SectionTitle
                 eyebrow="Newsletter"
-                title="Stay Updated With New Drops"
-                description="Get updates on special offers, new accessories, and fresh game releases."
+                title="Stay Updated"
+                description="Get notified about new drops, discounts, and exclusive gaming deals."
               />
+
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <div className="flex flex-1 items-center rounded-full border border-card-border bg-background/70 px-5 py-3">
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full bg-transparent text-sm text-white placeholder:text-muted focus:outline-none"
+                    className="w-full bg-transparent text-sm text-foreground placeholder:text-muted focus:outline-none"
                   />
                 </div>
+
                 <button className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-white transition hover:bg-primary-hover">
                   <FaPaperPlane />
                   Subscribe
@@ -308,8 +296,8 @@ const Page = () => {
               <p className="text-sm uppercase tracking-[0.3em] text-primary">
                 Exclusive Access
               </p>
-              <p className="mt-3 text-2xl font-bold text-white">
-                Deals, launches, and gaming inspiration.
+              <p className="mt-3 text-2xl font-bold text-foreground">
+                Deals, launches & inspiration.
               </p>
             </div>
           </div>
