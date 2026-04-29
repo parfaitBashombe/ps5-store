@@ -8,70 +8,75 @@ type ProductCardProps = {
   variant?: "featured" | "grid";
 };
 
-export default function ProductCard({
-  product,
-  variant = "featured",
-}: ProductCardProps) {
+const ProductCard = ({ product, variant = "featured" }: ProductCardProps) => {
   const stars = Array.from(
     { length: 5 },
     (_, index) => index < Math.round(product.rating),
   );
 
+  const isGrid = variant === "grid";
+
   return (
     <article
       id={product.id}
-      className="group overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5 shadow-xl shadow-blue-950/20 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/30 hover:bg-white/8"
+      className="group overflow-hidden rounded-3xl border border-card-border bg-card shadow-(--shadow-glow) backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
     >
-      <div className="relative h-56 overflow-hidden">
+      <div className={`relative overflow-hidden ${isGrid ? "h-40" : "h-56"}`}>
         <Image
           src={product.main_image}
           alt={product.title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-linear-to-t from-[#0a0f1f] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent" />
       </div>
 
-      <div className="p-5">
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <h3 className="text-xl font-semibold text-white">
-              {product.title}
-            </h3>
-            <p className="mt-2 text-2xl font-bold text-blue-400">
-              ${product.price.toFixed(2)}
-            </p>
-          </div>
-        </div>
+      <div className={isGrid ? "p-4" : "p-5"}>
+        <h3
+          className={`font-semibold text-foreground ${
+            isGrid ? "text-base" : "text-xl"
+          }`}
+        >
+          {product.title}
+        </h3>
 
-        <div className="mt-4 flex items-center gap-1">
+        <p
+          className={`font-bold text-primary ${
+            isGrid ? "mt-1 text-lg" : "mt-2 text-2xl"
+          }`}
+        >
+          ${product.price.toFixed(2)}
+        </p>
+
+        <div className="mt-3 flex items-center gap-1">
           {stars.map((filled, index) => (
             <FaStar
               key={index}
-              className={filled ? "text-yellow-400" : "text-slate-600"}
-              size={14}
+              size={12}
+              className={filled ? "text-yellow-400" : "text-muted"}
             />
           ))}
-          <span className="ml-2 text-sm text-slate-300">
-            {product.rating.toFixed(1)} ({product.reviews} reviews)
+
+          <span className="ml-2 text-xs text-muted-foreground">
+            {product.rating.toFixed(1)}
           </span>
         </div>
 
-        {variant === "grid" ? (
+        {isGrid ? (
           <>
-            <p className="mt-4 line-clamp-3 text-sm leading-6 text-slate-300">
+            <p className="mt-3 line-clamp-2 text-xs leading-5 text-muted-foreground">
               {product.description}
             </p>
 
             <Link
               href={`/products#${product.id}`}
-              className="mt-5 inline-flex w-full items-center justify-center rounded-full border border-blue-400/30 bg-blue-500/10 px-5 py-3 font-semibold text-blue-100 transition-all duration-300 hover:bg-blue-500/20 hover:text-white"
+              className="mt-4 inline-flex w-full items-center justify-center rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary/20"
             >
               View Details
             </Link>
           </>
         ) : (
-          <button className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-500 px-5 py-3 font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-400">
+          <button className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary-hover">
             <FaCartPlus />
             Add to Cart
           </button>
@@ -79,4 +84,6 @@ export default function ProductCard({
       </div>
     </article>
   );
-}
+};
+
+export default ProductCard;
