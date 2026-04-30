@@ -5,27 +5,35 @@ type SectionTitleProps = {
   centered?: boolean;
 };
 
-export default function SectionTitle({
+const SectionTitle = ({
   eyebrow,
   title,
   description,
   centered = false,
-}: SectionTitleProps) {
+}: SectionTitleProps) => {
   return (
     <div className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       {eyebrow ? (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
-          {eyebrow}
-        </p>
+        <span className="eyebrow-badge mb-4 inline-flex">{eyebrow}</span>
       ) : null}
-      <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+
+      <h2
+        className="font-display text-3xl font-bold tracking-tight md:text-4xl"
+        style={{ color: "var(--foreground)" }}
+      >
         {title}
       </h2>
+
       {description ? (
-        <p className="mt-4 text-base leading-7 text-slate-300 md:text-lg">
+        <p
+          className="mt-4 text-base leading-7 md:text-lg"
+          style={{ color: "var(--muted-foreground)" }}
+        >
           {description}
         </p>
       ) : null}
     </div>
   );
-}
+};
+
+export default SectionTitle;
