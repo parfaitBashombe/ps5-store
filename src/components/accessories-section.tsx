@@ -20,7 +20,7 @@ const iconMap: Record<string, IconType> = {
   vr: FaVrCardboard,
 };
 
-export default function AccessoriesSection() {
+const AccessoriesSection = () => {
   return (
     <section id="accessories" className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6">
@@ -53,6 +53,7 @@ export default function AccessoriesSection() {
                     src={a.image}
                     alt={a.name}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover"
                   />
                   {a.badge && (
@@ -100,3 +101,5 @@ export default function AccessoriesSection() {
     </section>
   );
 }
+
+export default AccessoriesSection;

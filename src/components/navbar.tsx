@@ -17,7 +17,7 @@ const navLinks = [
   { label: "Support", href: "#" },
 ];
 
-export default function Navbar() {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [cartCount] = useState(2);
 
@@ -109,3 +109,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;

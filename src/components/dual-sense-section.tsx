@@ -4,7 +4,7 @@ import db from "@/lib/db.json";
 
 const { dualsense } = db;
 
-export default function DualSenseSection() {
+const DualSenseSection = () => {
   return (
     <section className="bg-[#f5f5f7] py-20 lg:py-28 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
@@ -56,6 +56,7 @@ export default function DualSenseSection() {
                 src={dualsense.image}
                 alt={dualsense.name}
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover opacity-60"
               />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#003791]/60" />
@@ -67,3 +68,5 @@ export default function DualSenseSection() {
     </section>
   );
 }
+
+export default DualSenseSection;

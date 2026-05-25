@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FaStar, FaArrowRight } from "react-icons/fa";
 import db from "@/lib/db.json";
 
-export default function GamesSection() {
+const GamesSection = () => {
   return (
     <section id="games" className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6">
@@ -38,6 +38,7 @@ export default function GamesSection() {
                   src={g.image}
                   alt={g.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover opacity-40 mix-blend-overlay"
                 />
                 <span className="absolute top-3 left-3 text-xs font-bold text-white/90 bg-black/30 backdrop-blur-sm px-2.5 py-1 rounded-full">
@@ -72,3 +73,5 @@ export default function GamesSection() {
     </section>
   );
 }
+
+export default GamesSection;

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function NewsletterSection() {
+const NewsletterSection = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -55,3 +55,5 @@ export default function NewsletterSection() {
     </section>
   );
 }
+
+export default NewsletterSection;

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
 import db from "@/lib/db.json";
 
-export default function ConsoleSection() {
+const ConsoleSection = () => {
   return (
     <section id="consoles" className="bg-[#f5f5f7] py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6">
@@ -42,6 +42,7 @@ export default function ConsoleSection() {
                   src={c.image}
                   alt={c.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
@@ -87,3 +88,5 @@ export default function ConsoleSection() {
     </section>
   );
 }
+
+export default ConsoleSection;

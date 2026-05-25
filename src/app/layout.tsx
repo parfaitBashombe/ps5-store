@@ -13,9 +13,9 @@ export const metadata: Metadata = {
     "Shop PlayStation 5 consoles, games, and accessories. Experience the next generation of gaming.",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="en" className={`${geist.variable} h-full`}>
       <body className="min-h-full flex flex-col bg-white text-[#1d1d1f] antialiased">
@@ -23,4 +23,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
