@@ -1,0 +1,195 @@
+{
+  "consoles": [
+    {
+      "id": "ps5-standard",
+      "name": "PS5 Standard Edition",
+      "tagline": "With Ultra HD Blu-ray Disc Drive",
+      "price": 499.99,
+      "image": "https://picsum.photos/seed/ps5-standard-console/480/560",
+      "badge": "Best Seller",
+      "badgeBg": "#003791",
+      "badgeText": "#ffffff",
+      "accent": "#003791",
+      "cardBg": "#f0f5ff",
+      "cardBorder": "#003791",
+      "digital": false,
+      "features": [
+        "Ultra HD Blu-ray",
+        "825GB NVMe SSD",
+        "4K at 120fps",
+        "Ray Tracing",
+        "DualSense Controller"
+      ]
+    },
+    {
+      "id": "ps5-digital",
+      "name": "PS5 Digital Edition",
+      "tagline": "All-Digital Gaming Experience",
+      "price": 399.99,
+      "image": "https://picsum.photos/seed/ps5-digital-console/480/560",
+      "badge": "Great Value",
+      "badgeBg": "#1d1d1f",
+      "badgeText": "#ffffff",
+      "accent": "#1d1d1f",
+      "cardBg": "#f8f8f8",
+      "cardBorder": "#d1d5db",
+      "digital": true,
+      "features": [
+        "All-Digital",
+        "825GB NVMe SSD",
+        "4K at 120fps",
+        "Ray Tracing",
+        "DualSense Controller"
+      ]
+    }
+  ],
+  "games": [
+    {
+      "id": "spider-man-2",
+      "title": "Marvel's Spider-Man 2",
+      "genre": "Action Adventure",
+      "price": 69.99,
+      "rating": "4.9",
+      "image": "https://picsum.photos/seed/spiderman2-ps5/600/380",
+      "gradientFrom": "#c0392b",
+      "gradientVia": "#1a1a2e",
+      "gradientTo": "#003791",
+      "tag": "PS5 Exclusive"
+    },
+    {
+      "id": "god-of-war",
+      "title": "God of War Ragnarök",
+      "genre": "Action RPG",
+      "price": 69.99,
+      "rating": "4.9",
+      "image": "https://picsum.photos/seed/godofwar-ragnarok/600/380",
+      "gradientFrom": "#1a0a00",
+      "gradientVia": "#5c2800",
+      "gradientTo": "#b35900",
+      "tag": "PS5 Exclusive"
+    },
+    {
+      "id": "horizon-forbidden-west",
+      "title": "Horizon Forbidden West",
+      "genre": "Open World",
+      "price": 49.99,
+      "rating": "4.7",
+      "image": "https://picsum.photos/seed/horizon-forbidden/600/380",
+      "gradientFrom": "#003d1f",
+      "gradientVia": "#005c2e",
+      "gradientTo": "#00a854",
+      "tag": "PS5 Exclusive"
+    },
+    {
+      "id": "gran-turismo-7",
+      "title": "Gran Turismo 7",
+      "genre": "Racing Sim",
+      "price": 59.99,
+      "rating": "4.6",
+      "image": "https://picsum.photos/seed/gran-turismo7/600/380",
+      "gradientFrom": "#0d1b4b",
+      "gradientVia": "#003791",
+      "gradientTo": "#005f99",
+      "tag": "PS5 Enhanced"
+    },
+    {
+      "id": "demons-souls",
+      "title": "Demon's Souls",
+      "genre": "Action RPG",
+      "price": 39.99,
+      "rating": "4.8",
+      "image": "https://picsum.photos/seed/demons-souls-ps5/600/380",
+      "gradientFrom": "#0d0d1a",
+      "gradientVia": "#1a0033",
+      "gradientTo": "#4b0082",
+      "tag": "PS5 Exclusive"
+    },
+    {
+      "id": "returnal",
+      "title": "Returnal",
+      "genre": "Roguelike Shooter",
+      "price": 49.99,
+      "rating": "4.5",
+      "image": "https://picsum.photos/seed/returnal-ps5/600/380",
+      "gradientFrom": "#001a1a",
+      "gradientVia": "#004d4d",
+      "gradientTo": "#00b3b3",
+      "tag": "PS5 Exclusive"
+    }
+  ],
+  "accessories": [
+    {
+      "id": "dualsense-edge",
+      "name": "DualSense Edge Controller",
+      "description": "Customizable, pro-grade wireless controller",
+      "price": 199.99,
+      "image": "https://picsum.photos/seed/dualsense-edge-ctrl/300/300",
+      "iconType": "gamepad",
+      "accent": "#003791",
+      "badge": "New"
+    },
+    {
+      "id": "pulse-3d",
+      "name": "PULSE 3D Wireless Headset",
+      "description": "3D audio with dual noise-cancelling microphones",
+      "price": 99.99,
+      "image": "https://picsum.photos/seed/pulse3d-ps5/300/300",
+      "iconType": "headphones",
+      "accent": "#6d28d9",
+      "badge": "Popular"
+    },
+    {
+      "id": "hd-camera",
+      "name": "HD Camera",
+      "description": "Full HD 1080p streaming camera for PS5",
+      "price": 59.99,
+      "image": "https://picsum.photos/seed/hd-camera-ps5/300/300",
+      "iconType": "camera",
+      "accent": "#0f766e",
+      "badge": null
+    },
+    {
+      "id": "media-remote",
+      "name": "Media Remote",
+      "description": "Convenient media playback control for PS5",
+      "price": 29.99,
+      "image": "https://picsum.photos/seed/media-remote-ps5/300/300",
+      "iconType": "mobile",
+      "accent": "#b45309",
+      "badge": "Sale"
+    },
+    {
+      "id": "charging-station",
+      "name": "DualSense Charging Station",
+      "description": "Charge two DualSense controllers simultaneously",
+      "price": 29.99,
+      "image": "https://picsum.photos/seed/charging-station-ps5/300/300",
+      "iconType": "bolt",
+      "accent": "#be185d",
+      "badge": null
+    },
+    {
+      "id": "psvr2",
+      "name": "PlayStation VR2",
+      "description": "Next-gen VR with eye tracking and haptic feedback",
+      "price": 549.99,
+      "image": "https://picsum.photos/seed/psvr2-ps5/300/300",
+      "iconType": "vr",
+      "accent": "#1d4ed8",
+      "badge": "Featured"
+    }
+  ],
+  "dualsense": {
+    "name": "DualSense Wireless Controller",
+    "tagline": "Feel the Game.",
+    "subtitle": "DualSense™ Controller",
+    "price": 69.99,
+    "image": "https://picsum.photos/seed/dualsense-wireless/680/480",
+    "features": [
+      "Haptic Feedback",
+      "Adaptive Triggers",
+      "Built-in Microphone",
+      "USB-C Charging"
+    ]
+  }
+}
