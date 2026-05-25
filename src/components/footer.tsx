@@ -14,7 +14,7 @@ const socials = [
   { label: "Instagram", icon: FaInstagram, href: "#" },
 ];
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className="bg-[#1d1d1f] text-white">
       <div className="max-w-7xl mx-auto px-6 py-14">
@@ -69,3 +69,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;

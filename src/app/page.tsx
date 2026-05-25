@@ -7,7 +7,7 @@ import AccessoriesSection from "@/components/accessories-section";
 import NewsletterSection from "@/components/newsletter-section";
 import Footer from "@/components/footer";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Navbar />
@@ -22,4 +22,6 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
+
+export default Home;
