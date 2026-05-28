@@ -1,76 +1,105 @@
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaPlay } from "react-icons/fa";
 
-const VIDEO_URL =
-  "https://ik.imagekit.io/zzot6yvyh/images/ps5%20trailer.mp4?updatedAt=1763649847383";
+type HeroData = {
+  images: string[];
+  video: string;
+};
 
 const stats = [
-  { value: "825GB", label: "SSD Storage" },
+  { value: "825GB", label: "NVMe SSD" },
   { value: "120fps", label: "Max Framerate" },
   { value: "4K", label: "Ultra HD" },
+  { value: "3D", label: "Tempest Audio" },
 ];
 
-const Hero = () => {
+const Hero = ({ hero }: { hero: HeroData }) => {
   return (
-    <section className="relative overflow-hidden min-h-[90vh] flex items-center bg-[#001030]">
-      {/* Background video */}
+    <section className="relative overflow-hidden min-h-screen flex items-center bg-[#060a14]">
+      {/* Video background */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover scale-105"
       >
-        <source src={VIDEO_URL} type="video/mp4" />
+        <source src={hero.video} type="video/mp4" />
       </video>
 
+      {/* Multi-layer overlay for cinematic feel */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#060a14] via-[#060a14]/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#060a14] via-transparent to-[#060a14]/40" />
+      <div className="absolute inset-0 bg-[#003791]/10 mix-blend-multiply" />
+
+      {/* Animated glow orb */}
+      <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-[#003791]/20 blur-[120px] animate-pulse" />
+
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
-        <div className="max-w-xl bg-white/20 backdrop-blur-md border border-white/30 rounded-3xl p-10 flex flex-col gap-7">
-          <span className="inline-flex self-start items-center gap-2 bg-white/20 border border-white/30 text-white text-xs font-semibold px-3 py-1.5 rounded-full tracking-wide uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#003791] animate-pulse" />
-            Next Gen Gaming
-          </span>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 w-full">
+        <div className="max-w-2xl flex flex-col gap-8">
 
-          <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.05] tracking-tight">
-            Play Has{" "}
-            <span className="text-[#7eb3ff]">No&nbsp;Limits.</span>
-          </h1>
+          {/* Eyebrow badge */}
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center gap-2 bg-[#003791]/30 border border-[#003791]/50 backdrop-blur-sm text-[#7eb3ff] text-xs font-bold px-4 py-2 rounded-full tracking-widest uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0ea5e9] animate-pulse shadow-lg shadow-[#0ea5e9]/60" />
+              Next Gen Gaming
+            </span>
+          </div>
 
-          <p className="text-lg text-white/80 leading-relaxed">
-            Experience lightning-fast loading, haptic feedback, and breathtaking
-            4K visuals with the PlayStation 5 — the most powerful console ever made.
+          {/* Main heading */}
+          <div className="flex flex-col gap-3">
+            <h1 className="text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.95] tracking-tight">
+              Play Has
+            </h1>
+            <h1 className="text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.95] tracking-tight bg-gradient-to-r from-[#0ea5e9] via-[#7eb3ff] to-[#003791] bg-clip-text text-transparent">
+              No Limits.
+            </h1>
+          </div>
+
+          {/* Subtitle */}
+          <p className="text-lg text-white/60 leading-relaxed max-w-lg">
+            Lightning-fast loading. Haptic feedback that puts you in the game.
+            Breathtaking 4K visuals. The PlayStation 5 redefines what's possible.
           </p>
 
-          <div className="flex flex-wrap gap-3">
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-4 pt-2">
             <Link
               href="#consoles"
-              className="inline-flex items-center gap-2 h-12 px-7 rounded-full bg-[#003791] text-white font-semibold text-sm hover:bg-[#00277a] transition-colors"
+              className="group inline-flex items-center gap-2.5 h-14 px-8 rounded-xl bg-gradient-to-r from-[#003791] to-[#0055cc] text-white font-bold text-sm hover:from-[#0044aa] hover:to-[#0066dd] transition-all shadow-xl shadow-[#003791]/40 hover:shadow-[#003791]/60 hover:-translate-y-0.5"
             >
               Shop PS5
-              <FaArrowRight size={13} />
+              <FaArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
             </Link>
             <Link
               href="#games"
-              className="inline-flex items-center h-12 px-7 rounded-full border-2 border-white text-white font-semibold text-sm hover:bg-white hover:text-[#003791] transition-colors"
+              className="group inline-flex items-center gap-2.5 h-14 px-8 rounded-xl border border-white/20 text-white font-bold text-sm hover:bg-white/8 hover:border-white/40 backdrop-blur-sm transition-all"
             >
-              Explore Games
+              <FaPlay size={10} />
+              Watch Games
             </Link>
           </div>
 
           {/* Stats */}
-          <div className="flex gap-8 pt-2">
+          <div className="flex flex-wrap gap-6 pt-4 border-t border-white/10">
             {stats.map((s) => (
-              <div key={s.label}>
-                <p className="text-2xl font-black text-white">{s.value}</p>
-                <p className="text-xs text-white/60 font-medium mt-0.5">{s.label}</p>
+              <div key={s.label} className="flex flex-col gap-0.5">
+                <span className="text-2xl font-black text-white leading-none">{s.value}</span>
+                <span className="text-xs text-white/40 font-medium tracking-wider uppercase">{s.label}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
+        <span className="text-white/30 text-[10px] font-medium tracking-widest uppercase">Scroll</span>
+        <div className="w-px h-10 bg-gradient-to-b from-white/30 to-transparent" />
+      </div>
     </section>
   );
-}
+};
 
 export default Hero;
