@@ -1,11 +1,19 @@
 {
+  "hero": {
+    "images": [
+      "https://ik.imagekit.io/zzot6yvyh/images/hero%201.jpeg?updatedAt=1763649814582",
+      "https://ik.imagekit.io/zzot6yvyh/images/hero%202.jpeg?updatedAt=1763649814265"
+    ],
+    "video": "https://ik.imagekit.io/zzot6yvyh/images/ps5%20trailer.mp4"
+  },
+
   "consoles": [
     {
       "id": "ps5-standard",
       "name": "PS5 Standard Edition",
       "tagline": "With Ultra HD Blu-ray Disc Drive",
       "price": 499.99,
-      "image": "https://ik.imagekit.io/zzot6yvyh/images/hero%201.jpeg?updatedAt=1763649814582",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/hero%201.jpeg?updatedAt=1763649831443",
       "badge": "Best Seller",
       "badgeBg": "#003791",
       "badgeText": "#ffffff",
@@ -26,13 +34,13 @@
       "name": "PS5 Digital Edition",
       "tagline": "All-Digital Gaming Experience",
       "price": 399.99,
-      "image": "https://ik.imagekit.io/zzot6yvyh/images/hero%202.jpeg?updatedAt=1763649814265",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/hero%202.jpeg?updatedAt=1763649831914",
       "badge": "Great Value",
-      "badgeBg": "#1d1d1f",
+      "badgeBg": "#0ea5e9",
       "badgeText": "#ffffff",
-      "accent": "#1d1d1f",
+      "accent": "#0ea5e9",
       "cardBg": "#f8f8f8",
-      "cardBorder": "#d1d5db",
+      "cardBorder": "#0ea5e9",
       "digital": true,
       "features": [
         "All-Digital",
@@ -43,14 +51,248 @@
       ]
     }
   ],
+  "consoleSkins": [
+    {
+      "id": "default-console",
+      "name": "Default White",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/default%20console.jpeg?updatedAt=1763649831634",
+      "price": 39.99
+    },
+    {
+      "id": "black-console",
+      "name": "Midnight Black",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/black%20console.jpeg?updatedAt=1763649831716",
+      "price": 39.99
+    },
+    {
+      "id": "gold-console",
+      "name": "Gold Edition",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/gold%20console.jpeg?updatedAt=1763649830287",
+      "price": 49.99
+    },
+    {
+      "id": "golden-console",
+      "name": "Golden Chrome",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/golden%20console.jpeg?updatedAt=1763649831279",
+      "price": 49.99
+    },
+    {
+      "id": "golden-1-console",
+      "name": "Golden I",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/golden%201%20console.jpeg?updatedAt=1763649831779",
+      "price": 49.99
+    },
+    {
+      "id": "golden-1-console-2",
+      "name": "Golden I Alt",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/golden%201%20console%202.jpeg?updatedAt=1763649831748",
+      "price": 49.99
+    },
+    {
+      "id": "golden-2-console",
+      "name": "Golden II",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/golden%202%20console.jpeg?updatedAt=1763649813922",
+      "price": 49.99
+    },
+    {
+      "id": "golden-2-console-2",
+      "name": "Golden II Alt",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/golden%202%20console%202.jpeg?updatedAt=1763649831708",
+      "price": 49.99
+    },
+    {
+      "id": "red-marble-console",
+      "name": "Red Marble",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/red%20marble%20console.jpeg?updatedAt=1763649827032",
+      "price": 44.99
+    },
+    {
+      "id": "blue-marble-console",
+      "name": "Blue Marble",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/blue%20marble%20console.jpeg?updatedAt=1763649831240",
+      "price": 44.99
+    },
+    {
+      "id": "white-black-marble-console",
+      "name": "White & Black Marble",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/white-black%20marble%20console.jpeg?updatedAt=1763649831277",
+      "price": 44.99
+    },
+    {
+      "id": "blue-flame-console",
+      "name": "Blue Flame",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/blue%20flame%20console.jpeg?updatedAt=1763649831742",
+      "price": 44.99
+    },
+    {
+      "id": "blue-red-flame-console",
+      "name": "Blue & Red Flame",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/blue%20red%20flame%20console.jpeg?updatedAt=1763649832013",
+      "price": 44.99
+    },
+    {
+      "id": "on-fire-console",
+      "name": "On Fire",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/on%20fire%20console.jpeg?updatedAt=1763649831625",
+      "price": 44.99
+    },
+    {
+      "id": "blue-circle-console",
+      "name": "Blue Circle",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/blue%20circle%20console.jpeg?updatedAt=1763649815803",
+      "price": 39.99
+    },
+    {
+      "id": "blue-stone-console",
+      "name": "Blue Stone",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/blue%20stone%20console.jpeg?updatedAt=1763649831922",
+      "price": 39.99
+    },
+    {
+      "id": "blue-carbon-skin-console",
+      "name": "Blue Carbon Skin",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/blue%20carbon%20skin%20console.jpeg?updatedAt=1763649831801",
+      "price": 44.99
+    },
+    {
+      "id": "silver-carbon-skin-console",
+      "name": "Silver Carbon Skin",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/silver%20carbon%20skin%20console.jpeg?updatedAt=1763649831631",
+      "price": 44.99
+    },
+    {
+      "id": "black-hole-console",
+      "name": "Black Hole",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/black%20hole%20console.jpeg?updatedAt=1763649831620",
+      "price": 44.99
+    },
+    {
+      "id": "stars-console",
+      "name": "Stars",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/stars%20console.jpeg?updatedAt=1763649831267",
+      "price": 39.99
+    },
+    {
+      "id": "dragon-console",
+      "name": "Dragon",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/dragon%20console.jpeg?updatedAt=1763649831845",
+      "price": 49.99
+    },
+    {
+      "id": "spider-man-console",
+      "name": "Spider-Man",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/spider-man%20console.jpeg?updatedAt=1763649832087",
+      "price": 49.99
+    },
+    {
+      "id": "son-goku-console",
+      "name": "Son Goku",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/son%20goku%20console.jpeg?updatedAt=1763649816165",
+      "price": 49.99
+    },
+    {
+      "id": "miles-console",
+      "name": "Miles Morales",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/miles%20console.jpeg?updatedAt=1763649831328",
+      "price": 49.99
+    },
+    {
+      "id": "joker-console",
+      "name": "Joker",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/joker%20console.jpeg?updatedAt=1763649814176",
+      "price": 49.99
+    },
+    {
+      "id": "deathstroke-console",
+      "name": "Deathstroke",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/deathstroke%20console.jpeg?updatedAt=1763649831753",
+      "price": 49.99
+    },
+    {
+      "id": "assassin-creed-console",
+      "name": "Assassin's Creed",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/assassin%20creed%20console.jpeg?updatedAt=1763649831915",
+      "price": 49.99
+    },
+    {
+      "id": "gta-console",
+      "name": "GTA",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/gta%20console.jpeg?updatedAt=1763649831978",
+      "price": 49.99
+    },
+    {
+      "id": "grimoire-console",
+      "name": "Grimoire",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/grimoire%20console.jpeg?updatedAt=1763649831966",
+      "price": 49.99
+    },
+    {
+      "id": "balan-wonderworld-console",
+      "name": "Balan Wonderworld",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/balan%20wonderworld%20console.jpeg?updatedAt=1763649831476",
+      "price": 44.99
+    },
+    {
+      "id": "brush-drawing-console",
+      "name": "Brush Drawing",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/brush%20drawing%20console.jpeg?updatedAt=1763649830266",
+      "price": 44.99
+    },
+    {
+      "id": "morals-console",
+      "name": "Morals",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/morals%20console.jpeg?updatedAt=1763649831386",
+      "price": 44.99
+    },
+    {
+      "id": "green-glass-console",
+      "name": "Green Glass",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/green%20glass%20console.jpeg?updatedAt=1763649831801",
+      "price": 44.99
+    },
+    {
+      "id": "arsenal-console",
+      "name": "Arsenal",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/arsenal%20console.jpeg?updatedAt=1763649831383",
+      "price": 44.99
+    },
+    {
+      "id": "bayern-console",
+      "name": "Bayern Munich",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/bayern%20console.jpeg?updatedAt=1763649814500",
+      "price": 44.99
+    },
+    {
+      "id": "chelsea-console",
+      "name": "Chelsea",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/chelsea%20console.jpeg?updatedAt=1763649831837",
+      "price": 44.99
+    },
+    {
+      "id": "console-covers",
+      "name": "Console Covers Bundle",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/consoles/Console%20Covers.jpeg?updatedAt=1763649819429",
+      "price": 59.99
+    }
+  ],
   "games": [
     {
-      "id": "spider-man-2",
+      "id": "spider-man",
       "title": "Marvel's Spider-Man 2",
       "genre": "Action Adventure",
       "price": 69.99,
       "rating": "4.9",
-      "image": "https://picsum.photos/seed/spiderman2-ps5/600/380",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/games/spider-man/main.jpeg?updatedAt=1763649814752",
+      "screenshots": [
+        "https://ik.imagekit.io/zzot6yvyh/images/games/spider-man/1.jpeg?updatedAt=1763649814688",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/spider-man/2.jpeg?updatedAt=1763649814639",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/spider-man/3.jpeg?updatedAt=1763649814694",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/spider-man/4.jpeg?updatedAt=1763649814682",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/spider-man/5.jpeg?updatedAt=1763649814714",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/spider-man/6.jpeg?updatedAt=1763649816558",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/spider-man/7.jpeg?updatedAt=1763649814866"
+      ],
+      "video": "https://ik.imagekit.io/zzot6yvyh/images/games/spider-man/video.mp4?updatedAt=1763649857798",
       "gradientFrom": "#c0392b",
       "gradientVia": "#1a1a2e",
       "gradientTo": "#003791",
@@ -62,121 +304,363 @@
       "genre": "Action RPG",
       "price": 69.99,
       "rating": "4.9",
-      "image": "https://picsum.photos/seed/godofwar-ragnarok/600/380",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/games/god-of-war/god-of-war.jpeg?updatedAt=1763649816762",
+      "screenshots": [
+        "https://ik.imagekit.io/zzot6yvyh/images/games/god-of-war/1.jpeg?updatedAt=1763649814301",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/god-of-war/2.jpeg?updatedAt=1763649815303",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/god-of-war/3.jpeg?updatedAt=1763649814809",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/god-of-war/4.jpeg?updatedAt=1763649814649",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/god-of-war/5.jpeg?updatedAt=1763649815495",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/god-of-war/6.jpeg?updatedAt=1763649814728",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/god-of-war/7.jpeg?updatedAt=1763649814666"
+      ],
+      "video": "https://ik.imagekit.io/zzot6yvyh/images/games/god-of-war/video.mp4?updatedAt=1763649844707",
       "gradientFrom": "#1a0a00",
       "gradientVia": "#5c2800",
       "gradientTo": "#b35900",
       "tag": "PS5 Exclusive"
     },
     {
-      "id": "horizon-forbidden-west",
+      "id": "horizon-forbiden",
       "title": "Horizon Forbidden West",
       "genre": "Open World",
       "price": 49.99,
       "rating": "4.7",
-      "image": "https://picsum.photos/seed/horizon-forbidden/600/380",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/games/horizon-forbiden/main.jpeg?updatedAt=1763649815827",
+      "screenshots": [
+        "https://ik.imagekit.io/zzot6yvyh/images/games/horizon-forbiden/1.jpeg?updatedAt=1763649814554",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/horizon-forbiden/2.jpeg?updatedAt=1763649814721",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/horizon-forbiden/3.jpeg?updatedAt=1763649814544",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/horizon-forbiden/4.jpeg?updatedAt=1763649814916",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/horizon-forbiden/5.jpeg?updatedAt=1763649816053",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/horizon-forbiden/6.jpeg?updatedAt=1763649814654",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/horizon-forbiden/7.jpeg?updatedAt=1763649814379"
+      ],
+      "video": "https://ik.imagekit.io/zzot6yvyh/images/games/horizon-forbiden/video.mp4?updatedAt=1763649858234",
       "gradientFrom": "#003d1f",
       "gradientVia": "#005c2e",
       "gradientTo": "#00a854",
       "tag": "PS5 Exclusive"
     },
     {
-      "id": "gran-turismo-7",
-      "title": "Gran Turismo 7",
-      "genre": "Racing Sim",
-      "price": 59.99,
-      "rating": "4.6",
-      "image": "https://picsum.photos/seed/gran-turismo7/600/380",
-      "gradientFrom": "#0d1b4b",
-      "gradientVia": "#003791",
-      "gradientTo": "#005f99",
-      "tag": "PS5 Enhanced"
-    },
-    {
-      "id": "demons-souls",
+      "id": "demon-soul",
       "title": "Demon's Souls",
       "genre": "Action RPG",
       "price": 39.99,
       "rating": "4.8",
-      "image": "https://picsum.photos/seed/demons-souls-ps5/600/380",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/games/demon-soul/main.jpeg?updatedAt=1763649814698",
+      "screenshots": [
+        "https://ik.imagekit.io/zzot6yvyh/images/games/demon-soul/1.jpeg?updatedAt=1763649814571",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/demon-soul/2.jpeg?updatedAt=1763649816101",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/demon-soul/3.jpeg?updatedAt=1763649814611",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/demon-soul/4.jpeg?updatedAt=1763649814858",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/demon-soul/5.jpeg?updatedAt=1763649815468",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/demon-soul/6.jpeg?updatedAt=1763649814549"
+      ],
+      "video": "https://ik.imagekit.io/zzot6yvyh/images/games/demon-soul/video.mp4?updatedAt=1763649830990",
       "gradientFrom": "#0d0d1a",
       "gradientVia": "#1a0033",
       "gradientTo": "#4b0082",
       "tag": "PS5 Exclusive"
     },
     {
-      "id": "returnal",
-      "title": "Returnal",
-      "genre": "Roguelike Shooter",
+      "id": "silent-hill",
+      "title": "Silent Hill 2",
+      "genre": "Survival Horror",
       "price": 49.99,
-      "rating": "4.5",
-      "image": "https://picsum.photos/seed/returnal-ps5/600/380",
-      "gradientFrom": "#001a1a",
-      "gradientVia": "#004d4d",
-      "gradientTo": "#00b3b3",
+      "rating": "4.7",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/games/silent-hill/main.jpeg?updatedAt=1763649813886",
+      "screenshots": [
+        "https://ik.imagekit.io/zzot6yvyh/images/games/silent-hill/1.jpeg?updatedAt=1763649814148",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/silent-hill/2.jpeg?updatedAt=1763649814887",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/silent-hill/3.jpeg?updatedAt=1763649815500",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/silent-hill/4.jpeg?updatedAt=1763649814690",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/silent-hill/5.jpeg?updatedAt=1763649814557",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/silent-hill/6.jpeg?updatedAt=1763649816160",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/silent-hill/7.jpeg?updatedAt=1763649814657"
+      ],
+      "video": "https://ik.imagekit.io/zzot6yvyh/images/games/silent-hill/video.mp4?updatedAt=1763649860481",
+      "gradientFrom": "#1a0000",
+      "gradientVia": "#2d0a0a",
+      "gradientTo": "#8b0000",
+      "tag": "PS5 Enhanced"
+    },
+    {
+      "id": "stellar-blade",
+      "title": "Stellar Blade",
+      "genre": "Action RPG",
+      "price": 69.99,
+      "rating": "4.8",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/games/stellar-blade/main.jpeg?updatedAt=1763649814347",
+      "screenshots": [
+        "https://ik.imagekit.io/zzot6yvyh/images/games/stellar-blade/1.jpeg?updatedAt=1763649814674",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/stellar-blade/2.jpeg?updatedAt=1763649814703",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/stellar-blade/3.jpeg?updatedAt=1763649814213",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/stellar-blade/4.jpeg?updatedAt=1763649814218",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/stellar-blade/5.jpeg?updatedAt=1763649815972"
+      ],
+      "video": "https://ik.imagekit.io/zzot6yvyh/images/games/stellar-blade/video.mp4?updatedAt=1763649855315",
+      "gradientFrom": "#000033",
+      "gradientVia": "#001a66",
+      "gradientTo": "#0033cc",
       "tag": "PS5 Exclusive"
+    },
+    {
+      "id": "final-fantasy",
+      "title": "Final Fantasy XVI",
+      "genre": "Action RPG",
+      "price": 69.99,
+      "rating": "4.9",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/games/final-fantasy/main.jpeg?updatedAt=1763649816172",
+      "screenshots": [
+        "https://ik.imagekit.io/zzot6yvyh/images/games/final-fantasy/1.jpeg?updatedAt=1763649814713",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/final-fantasy/2.jpeg?updatedAt=1763649814160",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/final-fantasy/3.jpeg?updatedAt=1763649816080",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/final-fantasy/4.jpeg?updatedAt=1763649815639"
+      ],
+      "video": "https://ik.imagekit.io/zzot6yvyh/images/games/final-fantasy/video.mp4?updatedAt=1763649837034",
+      "gradientFrom": "#1a0033",
+      "gradientVia": "#330066",
+      "gradientTo": "#6600cc",
+      "tag": "PS5 Exclusive"
+    },
+    {
+      "id": "assassin-creed",
+      "title": "Assassin's Creed Shadows",
+      "genre": "Action Adventure",
+      "price": 59.99,
+      "rating": "4.6",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/games/assassin-creed/main.jpeg?updatedAt=1763649814320",
+      "screenshots": [
+        "https://ik.imagekit.io/zzot6yvyh/images/games/assassin-creed/1.jpeg?updatedAt=1763649814518",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/assassin-creed/2.jpeg?updatedAt=1763649815986",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/assassin-creed/3.jpeg?updatedAt=1763649816073",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/assassin-creed/4.jpeg?updatedAt=1763649814291",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/assassin-creed/5.jpeg?updatedAt=1763649815948",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/assassin-creed/6.jpeg?updatedAt=1763649816042",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/assassin-creed/7.jpeg?updatedAt=1763649814481",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/assassin-creed/8.jpeg?updatedAt=1763649814597"
+      ],
+      "video": "https://ik.imagekit.io/zzot6yvyh/images/games/assassin-creed/video.mp4?updatedAt=1763649884832",
+      "gradientFrom": "#0d0d00",
+      "gradientVia": "#1a1a00",
+      "gradientTo": "#4d4d00",
+      "tag": "PS5 Enhanced"
+    },
+    {
+      "id": "fc-25",
+      "title": "EA Sports FC 25",
+      "genre": "Sports",
+      "price": 69.99,
+      "rating": "4.5",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/games/fc-25/main.jpeg?updatedAt=1763649814874",
+      "screenshots": [
+        "https://ik.imagekit.io/zzot6yvyh/images/games/fc-25/1.jpeg?updatedAt=1763649815784",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/fc-25/2.jpeg?updatedAt=1763649814675",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/fc-25/3.jpeg?updatedAt=1763649814679"
+      ],
+      "video": "https://ik.imagekit.io/zzot6yvyh/images/games/fc-25/video.mp4?updatedAt=1763649896470",
+      "gradientFrom": "#003300",
+      "gradientVia": "#006600",
+      "gradientTo": "#00cc00",
+      "tag": "PS5 Enhanced"
+    },
+    {
+      "id": "ratchet-and-clank",
+      "title": "Ratchet & Clank: Rift Apart",
+      "genre": "Action Platformer",
+      "price": 69.99,
+      "rating": "4.8",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/games/ratchet-&-clank/main.jpeg?updatedAt=1763649814645",
+      "screenshots": [
+        "https://ik.imagekit.io/zzot6yvyh/images/games/ratchet-&-clank/1.jpeg?updatedAt=1763649814363",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/ratchet-&-clank/2.jpeg?updatedAt=1763649815886",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/ratchet-&-clank/3.jpeg?updatedAt=1763649814766",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/ratchet-&-clank/4.jpeg?updatedAt=1763649816638",
+        "https://ik.imagekit.io/zzot6yvyh/images/games/ratchet-&-clank/5.jpeg?updatedAt=1763649815942"
+      ],
+      "video": "https://ik.imagekit.io/zzot6yvyh/images/games/ratchet-&-clank/video.mp4?updatedAt=1763649849032",
+      "gradientFrom": "#660033",
+      "gradientVia": "#cc6600",
+      "gradientTo": "#ff9900",
+      "tag": "PS5 Exclusive"
+    }
+  ],
+  "controllers": [
+    {
+      "id": "default-controller",
+      "name": "DualSense White",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/default%20controller.jpeg?updatedAt=1763649815941",
+      "price": 69.99,
+      "badge": "Default"
+    },
+    {
+      "id": "default-2-controller",
+      "name": "DualSense Black",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/default%202%20controller.jpeg?updatedAt=1763649815840",
+      "price": 69.99,
+      "badge": null
+    },
+    {
+      "id": "dualsense-1",
+      "name": "DualSense Classic",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/contoller%201.jpeg?updatedAt=1763649814183",
+      "price": 69.99,
+      "badge": null
+    },
+    {
+      "id": "sky-blue-controller",
+      "name": "Sky Blue",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/sky%20blue%20controller.jpeg?updatedAt=1763649813817",
+      "price": 74.99,
+      "badge": null
+    },
+    {
+      "id": "gradient-blue-controller",
+      "name": "Gradient Blue",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/gradient%20blue%20controller.jpeg?updatedAt=1763649814078",
+      "price": 74.99,
+      "badge": null
+    },
+    {
+      "id": "yellow-controller",
+      "name": "Yellow",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/yellow%20controller.jpeg?updatedAt=1763649814578",
+      "price": 74.99,
+      "badge": null
+    },
+    {
+      "id": "red-black-controller",
+      "name": "Red & Black",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/red-black%20controller.jpeg?updatedAt=1763649815900",
+      "price": 74.99,
+      "badge": null
+    },
+    {
+      "id": "spider-man-controller",
+      "name": "Spider-Man",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/spider%20man%20controller.jpeg?updatedAt=1763649814283",
+      "price": 79.99,
+      "badge": "Limited"
+    },
+    {
+      "id": "spider-controller",
+      "name": "Spider",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/spider%20controller.jpeg?updatedAt=1763649815751",
+      "price": 79.99,
+      "badge": null
+    },
+    {
+      "id": "gta-controller",
+      "name": "GTA Edition",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/gta%20controller.jpeg?updatedAt=1763649815966",
+      "price": 79.99,
+      "badge": "Limited"
+    },
+    {
+      "id": "blood-paint-controller",
+      "name": "Blood Paint",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/blood%20paint%20controller.jpeg?updatedAt=1763649816444",
+      "price": 79.99,
+      "badge": null
+    },
+    {
+      "id": "stealth-soldier-controller",
+      "name": "Stealth Soldier",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/stealth%20soldier.jpeg?updatedAt=1763649814517",
+      "price": 79.99,
+      "badge": null
+    },
+    {
+      "id": "uefa-champions-league-controller",
+      "name": "UEFA Champions League",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/uefa%20champions%20league%20controller.jpeg?updatedAt=1763649814591",
+      "price": 84.99,
+      "badge": "Limited"
     }
   ],
   "accessories": [
     {
-      "id": "dualsense-edge",
-      "name": "DualSense Edge Controller",
-      "description": "Customizable, pro-grade wireless controller",
-      "price": 199.99,
-      "image": "https://picsum.photos/seed/dualsense-edge-ctrl/300/300",
+      "id": "dualsense-white",
+      "name": "DualSense White",
+      "description": "The iconic PS5 wireless controller with haptic feedback and adaptive triggers",
+      "price": 69.99,
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/default%20controller.jpeg?updatedAt=1763649815941",
       "iconType": "gamepad",
       "accent": "#003791",
-      "badge": "New"
+      "badge": "Best Seller"
     },
     {
-      "id": "pulse-3d",
-      "name": "PULSE 3D Wireless Headset",
-      "description": "3D audio with dual noise-cancelling microphones",
-      "price": 99.99,
-      "image": "https://picsum.photos/seed/pulse3d-ps5/300/300",
-      "iconType": "headphones",
-      "accent": "#6d28d9",
-      "badge": "Popular"
-    },
-    {
-      "id": "hd-camera",
-      "name": "HD Camera",
-      "description": "Full HD 1080p streaming camera for PS5",
-      "price": 59.99,
-      "image": "https://picsum.photos/seed/hd-camera-ps5/300/300",
-      "iconType": "camera",
-      "accent": "#0f766e",
+      "id": "dualsense-black",
+      "name": "DualSense Midnight Black",
+      "description": "Sleek all-black edition with full DualSense technology",
+      "price": 69.99,
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/default%202%20controller.jpeg?updatedAt=1763649815840",
+      "iconType": "gamepad",
+      "accent": "#94a3b8",
       "badge": null
     },
     {
-      "id": "media-remote",
-      "name": "Media Remote",
-      "description": "Convenient media playback control for PS5",
-      "price": 29.99,
-      "image": "https://picsum.photos/seed/media-remote-ps5/300/300",
-      "iconType": "mobile",
-      "accent": "#b45309",
-      "badge": "Sale"
-    },
-    {
-      "id": "charging-station",
-      "name": "DualSense Charging Station",
-      "description": "Charge two DualSense controllers simultaneously",
-      "price": 29.99,
-      "image": "https://picsum.photos/seed/charging-station-ps5/300/300",
-      "iconType": "bolt",
-      "accent": "#be185d",
+      "id": "dualsense-sky-blue",
+      "name": "DualSense Sky Blue",
+      "description": "Vibrant sky blue colourway with full DualSense haptic technology",
+      "price": 74.99,
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/sky%20blue%20controller.jpeg?updatedAt=1763649813817",
+      "iconType": "gamepad",
+      "accent": "#0ea5e9",
       "badge": null
     },
     {
-      "id": "psvr2",
-      "name": "PlayStation VR2",
-      "description": "Next-gen VR with eye tracking and haptic feedback",
-      "price": 549.99,
-      "image": "https://picsum.photos/seed/psvr2-ps5/300/300",
-      "iconType": "vr",
+      "id": "dualsense-spider-man",
+      "name": "DualSense Spider-Man",
+      "description": "Limited edition Marvel's Spider-Man themed DualSense controller",
+      "price": 79.99,
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/spider%20man%20controller.jpeg?updatedAt=1763649814283",
+      "iconType": "gamepad",
+      "accent": "#c0392b",
+      "badge": "Limited"
+    },
+    {
+      "id": "dualsense-gta",
+      "name": "DualSense GTA Edition",
+      "description": "Grand Theft Auto special collector's edition DualSense controller",
+      "price": 79.99,
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/gta%20controller.jpeg?updatedAt=1763649815966",
+      "iconType": "gamepad",
+      "accent": "#16a34a",
+      "badge": "Limited"
+    },
+    {
+      "id": "dualsense-uefa",
+      "name": "DualSense UEFA Edition",
+      "description": "Official UEFA Champions League collector's edition controller",
+      "price": 84.99,
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/uefa%20champions%20league%20controller.jpeg?updatedAt=1763649814591",
+      "iconType": "gamepad",
       "accent": "#1d4ed8",
-      "badge": "Featured"
+      "badge": "Limited"
+    }
+  ],
+  "avatars": [
+    {
+      "id": "avatar-1",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/avatars/avatar%201.jpeg?updatedAt=1763649832055"
+    },
+    {
+      "id": "avatar-2",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/avatars/avatar%202.jpeg?updatedAt=1763649831726"
+    },
+    {
+      "id": "avatar-3",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/avatars/avatar%203.jpeg?updatedAt=1763649831775"
+    },
+    {
+      "id": "avatar-4",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/avatars/avatar%204.jpeg?updatedAt=1763649832022"
+    },
+    {
+      "id": "avatar-5",
+      "image": "https://ik.imagekit.io/zzot6yvyh/images/avatars/avatar%205.jpeg?updatedAt=1763649832050"
     }
   ],
   "dualsense": {
@@ -184,7 +668,7 @@
     "tagline": "Feel the Game.",
     "subtitle": "DualSense™ Controller",
     "price": 69.99,
-    "image": "https://picsum.photos/seed/dualsense-wireless/680/480",
+    "image": "https://ik.imagekit.io/zzot6yvyh/images/controllers/contoller%201.jpeg?updatedAt=1763649814183",
     "features": [
       "Haptic Feedback",
       "Adaptive Triggers",

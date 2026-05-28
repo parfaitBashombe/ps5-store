@@ -18,7 +18,7 @@ const RootLayout = ({
 }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="en" className={`${geist.variable} h-full`}>
-      <body className="min-h-full flex flex-col bg-white text-[#1d1d1f] antialiased">
+      <body className="min-h-full flex flex-col bg-[#060a14] text-[#e8eaf0] antialiased">
         {children}
       </body>
     </html>
