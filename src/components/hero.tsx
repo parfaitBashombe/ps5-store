@@ -3,7 +3,10 @@ import { FaArrowRight, FaPlay } from "react-icons/fa";
 
 type HeroData = {
   images: string[];
-  video: string;
+  videos: {
+    home: string;
+    products: string;
+  };
 };
 
 const stats = [
@@ -24,7 +27,7 @@ const Hero = ({ hero }: { hero: HeroData }) => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover scale-105"
       >
-        <source src={hero.video} type="video/mp4" />
+        <source src={hero.videos.home} type="video/mp4" />
       </video>
 
       {/* Multi-layer overlay for cinematic feel */}
