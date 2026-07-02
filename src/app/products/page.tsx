@@ -1,7 +1,11 @@
+import data from "@/lib/db.json"
 
 const ProductsPage = () => {
+
   return (
-    <div>PAGE</div>
+    <section className="min-h-screen relative">
+
+    </section>
   )
 }
 
